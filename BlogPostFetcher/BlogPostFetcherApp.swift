@@ -11,7 +11,7 @@ import SwiftUI
 struct BlogPostFetcherApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BlogPostsView()
         }
     }
 }
