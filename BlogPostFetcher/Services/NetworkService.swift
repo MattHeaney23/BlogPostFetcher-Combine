@@ -11,6 +11,7 @@ import Foundation
 class NetworkService<T: Codable> {
     func fetchData(url: URL) -> AnyPublisher<T, Error> {
         return URLSession.shared.dataTaskPublisher(for: url)
+            .receive(on: DispatchQueue.global(qos: .background))
             .map(\.data)
             .decode(type: T.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()

@@ -24,7 +24,6 @@ class BlogPostsViewModel: ObservableObject {
     }
     
     private func prepareSubscribers() {
-        loadingState = .loading
         
         guard let url = URLs.blogPostURL else {
             self.loadingState = .error(NetworkError.InvalidURL)
@@ -32,15 +31,14 @@ class BlogPostsViewModel: ObservableObject {
         }
         
         refreshSubject
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.global(qos: .background))
             .flatMap { self.networkService.fetchData(url: url) }
-            .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
+            .receive(on: DispatchQueue.main)
             .sink { completion in
-                
                 switch completion {
                 case .finished: return
                 case .failure(let error): self.loadingState = .error(error)
                 }
-                
             } receiveValue: { posts in
                 self.loadingState = .success(posts)
             }

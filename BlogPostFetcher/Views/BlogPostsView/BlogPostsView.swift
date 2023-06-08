@@ -12,12 +12,26 @@ struct BlogPostsView: View {
     @ObservedObject var viewModel = BlogPostsViewModel()
     
     var body: some View {
-        Button {
-            viewModel.refreshSubject.send()
-        } label: {
-            Text("Let's refresh!")
+        
+        VStack {
+            
+            Spacer()
+            
+            switch viewModel.loadingState {
+            case .loading: Text("Loading")
+            case .error(let error): Text("Error")
+            case .success(let blogs): Text("Blogs! \(blogs.count) of them!")
+            }
+            
+            Spacer()
+        
+            Button {
+                viewModel.refreshSubject.send()
+            } label: {
+                Text("Let's refresh!")
+            }
+            
         }
-
     }
 }
 
