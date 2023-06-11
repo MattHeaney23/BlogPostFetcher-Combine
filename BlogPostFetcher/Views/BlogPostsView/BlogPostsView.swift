@@ -13,25 +13,37 @@ struct BlogPostsView: View {
     
     var body: some View {
         
-        VStack {
-            
-            Spacer()
-            
+        VStack(spacing: 0) {
             switch viewModel.loadingState {
             case .loading: Text("Loading")
             case .error(let error): Text("Error")
-            case .success(let blogs): Text("Blogs! \(blogs.count) of them!")
+            case .success(let blogs): blogList(blogs)
             }
-            
-            Spacer()
-        
-            Button {
-                viewModel.refreshSubject.send()
-            } label: {
-                Text("Let's refresh!")
-            }
-            
         }
+        .toolbar {
+            if viewModel.loadingState != .loading {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        viewModel.refreshSubject.send()
+                    } label: {
+                        Image(systemName: "arrow.clockwise")
+                            .foregroundColor(.black)
+                    }
+                }
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.gray.opacity(0.05))
+    }
+    
+    //MARK: Views
+    func blogList(_ blogs: [Blog]) -> some View {
+        List {
+            ForEach(blogs) { blog in
+                BlogPostRow(blog: blog)
+            }
+        }
+        .background(.gray)
     }
 }
 

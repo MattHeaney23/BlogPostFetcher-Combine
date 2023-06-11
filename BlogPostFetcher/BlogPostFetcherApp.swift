@@ -11,7 +11,12 @@ import SwiftUI
 struct BlogPostFetcherApp: App {
     var body: some Scene {
         WindowGroup {
-            BlogPostsView()
+            NavigationView {
+                BlogPostsView()
+                    .navigationTitle("Blogsters")
+                
+                .navigationBarTitleDisplayMode(.inline)
+            }
         }
     }
 }

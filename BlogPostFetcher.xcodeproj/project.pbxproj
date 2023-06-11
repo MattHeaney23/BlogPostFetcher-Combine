@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91216E22A36225B00F45028 /* BlogPostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91216E12A36225B00F45028 /* BlogPostRow.swift */; };
 		C9E8776F2A3245BA009E27F3 /* BlogPostFetcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E8776E2A3245BA009E27F3 /* BlogPostFetcherApp.swift */; };
 		C9E877712A3245BA009E27F3 /* BlogPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E877702A3245BA009E27F3 /* BlogPostsView.swift */; };
 		C9E877732A3245BC009E27F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E877722A3245BC009E27F3 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C91216E12A36225B00F45028 /* BlogPostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostRow.swift; sourceTree = "<group>"; };
 		C9E8776B2A3245BA009E27F3 /* BlogPostFetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogPostFetcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E8776E2A3245BA009E27F3 /* BlogPostFetcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostFetcherApp.swift; sourceTree = "<group>"; };
 		C9E877702A3245BA009E27F3 /* BlogPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostsView.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C91216E02A36224B00F45028 /* Componets */ = {
+			isa = PBXGroup;
+			children = (
+				C91216E12A36225B00F45028 /* BlogPostRow.swift */,
+			);
+			path = Componets;
+			sourceTree = "<group>";
+		};
 		C9E877622A3245BA009E27F3 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		C9E8777D2A324665009E27F3 /* BlogPostsView */ = {
 			isa = PBXGroup;
 			children = (
+				C91216E02A36224B00F45028 /* Componets */,
 				C9E877702A3245BA009E27F3 /* BlogPostsView.swift */,
 				C9E8777E2A3246D6009E27F3 /* BlogPostsViewModel.swift */,
 			);
@@ -219,6 +230,7 @@
 				C9E877712A3245BA009E27F3 /* BlogPostsView.swift in Sources */,
 				C9E877872A324F4D009E27F3 /* NetworkService.swift in Sources */,
 				C9E8776F2A3245BA009E27F3 /* BlogPostFetcherApp.swift in Sources */,
+				C91216E22A36225B00F45028 /* BlogPostRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
