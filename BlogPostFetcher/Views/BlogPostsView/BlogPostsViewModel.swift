@@ -10,12 +10,15 @@ import SwiftUI
 
 class BlogPostsViewModel: ObservableObject {
     
+    //MARK: Dependancies
     public var refreshSubject: PassthroughSubject<Void, Never>
     private var cancellables = Set<AnyCancellable>()
     private let networkService: NetworkService<[Blog]>
     
+    //MARK: States
     @Published var loadingState: LoadingState = .loading
     
+    //MARK: Initializers
     init() {
         self.networkService = NetworkService<[Blog]>()
         self.refreshSubject = PassthroughSubject()
@@ -23,6 +26,7 @@ class BlogPostsViewModel: ObservableObject {
         self.refreshSubject.send()
     }
     
+    //MARK: Subscription Logic
     private func prepareSubscribers() {
         
         guard let url = URLs.blogPostURL else {

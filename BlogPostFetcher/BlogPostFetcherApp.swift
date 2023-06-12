@@ -14,8 +14,7 @@ struct BlogPostFetcherApp: App {
             NavigationView {
                 BlogPostsView()
                     .navigationTitle("Blogsters")
-                
-                .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarTitleDisplayMode(.inline)
             }
         }
     }

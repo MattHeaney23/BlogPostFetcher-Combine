@@ -9,10 +9,11 @@ import SwiftUI
 
 struct BlogPostsView: View {
     
+    //MARK: Dependancies
     @ObservedObject var viewModel = BlogPostsViewModel()
     
+    //MARK: Body
     var body: some View {
-        
         VStack(spacing: 0) {
             switch viewModel.loadingState {
             case .loading: LoadingComponent()

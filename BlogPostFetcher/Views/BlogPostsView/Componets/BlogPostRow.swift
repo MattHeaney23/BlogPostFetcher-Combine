@@ -9,10 +9,11 @@ import SwiftUI
 
 struct BlogPostRow: View {
     
+    //MARK: Dependancies
     let blog: Blog
     
+    //MARK: Body
     var body: some View {
-        
         NavigationLink {
             BlogView(viewModel: BlogViewModel(blog: blog))
         } label: {

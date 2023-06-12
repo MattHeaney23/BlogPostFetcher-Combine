@@ -8,8 +8,10 @@
 import SwiftUI
 
 class BlogViewModel {
+    //MARK: Dependancies
     let blog: Blog
     
+    //MARK: Initializers
     init(blog: Blog) {
         self.blog = blog
     }

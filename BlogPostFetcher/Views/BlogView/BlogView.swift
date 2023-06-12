@@ -9,8 +9,10 @@ import SwiftUI
 
 struct BlogView: View {
     
+    //MARK: Dependancies
     let viewModel: BlogViewModel
     
+    //MARK: Body
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 16) {
