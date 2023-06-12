@@ -35,5 +35,6 @@ Create a simple blog post fetcher app using the Combine framework that does the 
 - The loading and error states are set up as reusable views.
 
 ## Screenshots
-![Blogster-HomePage](https://github.com/MattHeaney23/BlogPostFetcher-Combine/assets/129856192/3ddad033-ee57-4a9a-8742-ca62a802b2c0) ![Blogstar-BlogView](https://github.com/MattHeaney23/BlogPostFetcher-Combine/assets/129856192/6438c2df-41a6-4fd4-94db-a1f959625e26)
+![Blogster-HomePage](https://github.com/MattHeaney23/BlogPostFetcher-Combine/assets/129856192/3ddad033-ee57-4a9a-8742-ca62a802b2c0) ![Blogster-BlogView](https://github.com/MattHeaney23/BlogPostFetcher-Combine/assets/129856192/bc83be7d-46b5-4530-a36e-e36fdcb8c3db)
+
 
