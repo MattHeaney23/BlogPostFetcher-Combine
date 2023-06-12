@@ -15,8 +15,8 @@ struct BlogPostsView: View {
         
         VStack(spacing: 0) {
             switch viewModel.loadingState {
-            case .loading: Text("Loading")
-            case .error(let error): Text("Error")
+            case .loading: LoadingComponent()
+            case .error(let error): ErrorComponent(error: error)
             case .success(let blogs): blogList(blogs)
             }
         }

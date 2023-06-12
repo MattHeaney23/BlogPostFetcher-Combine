@@ -12,14 +12,19 @@ struct BlogPostRow: View {
     let blog: Blog
     
     var body: some View {
-        VStack {
-            Text(blog.title)
-                .bold()
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            HStack {
-                Text("Blogger: \(blog.blogger)")
+        
+        NavigationLink {
+            BlogView(viewModel: BlogViewModel(blog: blog))
+        } label: {
+            VStack {
+                Text(blog.title)
+                    .bold()
                     .frame(maxWidth: .infinity, alignment: .leading)
+                
+                HStack {
+                    Text("Blogger: \(blog.blogger)")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
             }
         }
     }

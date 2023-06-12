@@ -12,6 +12,16 @@ class Blog: Codable, Identifiable {
     let id: Int
     let title: String
     let body: String
+    
+    init(blogger: String,
+         id: Int,
+         title: String,
+         body: String) {
+        self.blogger = blogger
+        self.id = id
+        self.title = title
+        self.body = body
+    }
 }
 
 extension Blog: Equatable {

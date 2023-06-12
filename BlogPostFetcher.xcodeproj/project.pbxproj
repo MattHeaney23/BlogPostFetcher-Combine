@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C91216E22A36225B00F45028 /* BlogPostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91216E12A36225B00F45028 /* BlogPostRow.swift */; };
+		C91216E62A375BE500F45028 /* ErrorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91216E42A375BE500F45028 /* ErrorComponent.swift */; };
+		C91216E72A375BE500F45028 /* LoadingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91216E52A375BE500F45028 /* LoadingComponent.swift */; };
+		C91216EA2A375DF500F45028 /* BlogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91216E92A375DF500F45028 /* BlogView.swift */; };
+		C91216EC2A375F6F00F45028 /* BlogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91216EB2A375F6F00F45028 /* BlogViewModel.swift */; };
 		C9E8776F2A3245BA009E27F3 /* BlogPostFetcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E8776E2A3245BA009E27F3 /* BlogPostFetcherApp.swift */; };
 		C9E877712A3245BA009E27F3 /* BlogPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E877702A3245BA009E27F3 /* BlogPostsView.swift */; };
 		C9E877732A3245BC009E27F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E877722A3245BC009E27F3 /* Assets.xcassets */; };
@@ -22,6 +26,10 @@
 
 /* Begin PBXFileReference section */
 		C91216E12A36225B00F45028 /* BlogPostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostRow.swift; sourceTree = "<group>"; };
+		C91216E42A375BE500F45028 /* ErrorComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorComponent.swift; sourceTree = "<group>"; };
+		C91216E52A375BE500F45028 /* LoadingComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingComponent.swift; sourceTree = "<group>"; };
+		C91216E92A375DF500F45028 /* BlogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogView.swift; sourceTree = "<group>"; };
+		C91216EB2A375F6F00F45028 /* BlogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewModel.swift; sourceTree = "<group>"; };
 		C9E8776B2A3245BA009E27F3 /* BlogPostFetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogPostFetcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E8776E2A3245BA009E27F3 /* BlogPostFetcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostFetcherApp.swift; sourceTree = "<group>"; };
 		C9E877702A3245BA009E27F3 /* BlogPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostsView.swift; sourceTree = "<group>"; };
@@ -52,6 +60,24 @@
 				C91216E12A36225B00F45028 /* BlogPostRow.swift */,
 			);
 			path = Componets;
+			sourceTree = "<group>";
+		};
+		C91216E32A375BD800F45028 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				C91216E42A375BE500F45028 /* ErrorComponent.swift */,
+				C91216E52A375BE500F45028 /* LoadingComponent.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		C91216E82A375DE200F45028 /* BlogView */ = {
+			isa = PBXGroup;
+			children = (
+				C91216E92A375DF500F45028 /* BlogView.swift */,
+				C91216EB2A375F6F00F45028 /* BlogViewModel.swift */,
+			);
+			path = BlogView;
 			sourceTree = "<group>";
 		};
 		C9E877622A3245BA009E27F3 = {
@@ -98,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				C9E8777D2A324665009E27F3 /* BlogPostsView */,
+				C91216E82A375DE200F45028 /* BlogView */,
+				C91216E32A375BD800F45028 /* ReusableViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,14 +250,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91216EC2A375F6F00F45028 /* BlogViewModel.swift in Sources */,
 				C9E8777F2A3246D6009E27F3 /* BlogPostsViewModel.swift in Sources */,
 				C9E8778E2A3252C9009E27F3 /* NetworkError.swift in Sources */,
 				C9E877822A324EFC009E27F3 /* Blog.swift in Sources */,
 				C9E877842A324F1A009E27F3 /* LoadingState.swift in Sources */,
+				C91216EA2A375DF500F45028 /* BlogView.swift in Sources */,
 				C9E8778A2A3251D3009E27F3 /* URLs.swift in Sources */,
 				C9E877712A3245BA009E27F3 /* BlogPostsView.swift in Sources */,
+				C91216E62A375BE500F45028 /* ErrorComponent.swift in Sources */,
 				C9E877872A324F4D009E27F3 /* NetworkService.swift in Sources */,
 				C9E8776F2A3245BA009E27F3 /* BlogPostFetcherApp.swift in Sources */,
+				C91216E72A375BE500F45028 /* LoadingComponent.swift in Sources */,
 				C91216E22A36225B00F45028 /* BlogPostRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
